@@ -1,0 +1,65 @@
+body{
+    display: grid;
+    justify-content: center;
+}
+
+h1{
+    align-content: left;
+}
+/*Hello*/
+div{
+    width: 300px;
+    height: 400px;
+    background: deepskyblue;
+    border: 0.8px dashed black;
+    overflow: hidden;    
+}
+
+.ad{
+    position: relative;
+    left: -200px;
+    /* top: 250px; Þessi gæi ýtir textanum helling niður og hann kemur ekki á augýsinguna */
+    animation: fyrstitexti 3s infinite;
+}
+
+.button {
+    background-color: #348bee;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 60px;
+    animation: buttonBirtist;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
+
+
+.mynd{
+    width: 150px;
+    height: 200px;
+    margin: 70px;
+    margin-top: 20px;
+    animation: myndBirtist;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fyrstitexti{
+    0% {left: -200px;}
+    100% {left: 60px;}
+}
+
+@keyframes myndBirtist{
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes buttonBirtist{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
